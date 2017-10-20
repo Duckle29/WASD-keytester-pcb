@@ -167,14 +167,7 @@ void debounce()
 
     for(int i=0; i<6; i++)
     {
-        if((switch_states[i] & debounce_mask) == debounce_mask)
-        {
-            debounced_states[i] = True;
-        }
-        else
-        {
-            debounced_states[i] = False;
-        }
+        debounced_states[i] = ((switch_states[i] & debounce_mask) == debounce_mask);
     }
 
 }
