@@ -66,11 +66,11 @@ void loop()
           last_debounced_states[i] = debounced_states[i];
           if(debounced_states[i])
           {
-              sendKeys(debounced_states[i]);
+              sendKeys(i);
           }
           else
           {
-              sendKeys(debounced_states[i]+6);
+              sendKeys(i+6);
           }
       }
   }
